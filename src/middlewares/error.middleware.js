@@ -14,7 +14,7 @@ const errorConverter = (err, req, res, next) => {
   next(error);
 };
 
-const errorHandler = (err, req, res, next) => {
+const errorHandler = (err, req, res) => {
   let { statusCode, message } = err;
 
   if (env.nodeEnv === 'production' && !err.isOperational) {

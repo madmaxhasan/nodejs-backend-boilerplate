@@ -9,8 +9,8 @@
     "test": "jest --coverage --verbose",
     "test:watch": "jest --watch",
     "lint": "eslint . --max-warnings 0",
-    "lint:fix": "eslint . --fix && prettier --write '**/*.js'",
-    "format": "prettier --write '**/*.js'",
+    "lint:fix": "eslint . --fix && prettier --write **/*.js",
+    "format": "prettier --write **/*.js",
     "seed": "node scripts/seed.js",
     "prepare": "husky"
   },

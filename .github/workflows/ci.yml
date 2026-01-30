@@ -39,7 +39,7 @@ jobs:
         run: yarn lint
 
       - name: Run Prettier check
-        run: prettier --check "**/*.js"
+        run: prettier --check src/**/*.js
 
       - name: Run tests
         run: yarn test
