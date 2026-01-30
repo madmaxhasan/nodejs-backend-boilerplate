@@ -35,17 +35,17 @@ Production-grade Node.js REST API boilerplate with clean architecture, focusing 
 ```
 src/
 ├── app.js                  # Express app setup
-├── index.js               # Server entry point
-├── routes.js              # Route registry
-├── config/                # Configuration files
-├── docs/                  # API documentation
-├── modules/               # Feature modules
-│   ├── auth/             # Authentication module
-│   └── user/             # User module
-├── middlewares/          # Express middlewares
-├── utils/                # Utility functions
-├── tests/                # Test files
-└── jobs/                 # Background jobs
+├── index.js                # Server entry point
+├── routes.js               # Route registry
+├── config/                 # Configuration files
+├── docs/                   # API documentation
+├── modules/                # Feature modules
+│   ├── auth/               # Authentication module
+│   └── user/               # User module
+├── middlewares/            # Express middlewares
+├── utils/                  # Utility functions
+├── tests/                  # Test files
+└── jobs/                   # Background jobs
 ```
 
 ## Getting Started
