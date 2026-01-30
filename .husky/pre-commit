@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Run lint-staged to lint/format staged files before commit
-npx --no -- lint-staged
+# Run full lint on all JS files, not just staged ones
+yarn lint
