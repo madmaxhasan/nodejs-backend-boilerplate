@@ -1,0 +1,33 @@
+# Ignore common build and generated folders
+node_modules/
+build/
+android/
+ios/
+web-build/
+coverage/
+dist/
+
+# Ignore IDE-specific configuration
+.vscode/
+.expo/
+
+# Ignore build artifacts and logs
+*.apk
+*.ipa
+*.aab
+*.log
+
+# Ignore version and configuration files
+.nvmrc
+.gitignore
+package.json
+package-lock.json
+
+# Ignore documentation and license files
+README.md
+LICENSE
+
+# ESlint
+.eslintrc
+.eslintrc.js
+.eslintrc.json
