@@ -64,8 +64,9 @@ jobs:
       - name: Build Docker image
         run: docker build -f docker/Dockerfile -t nodejs-backend:latest .
 
-      - name: Test Docker image
+      - name: NodeJS Backend Boilerplate
         run: |
-          docker run --rm -d --name test-container nodejs-backend:latest
+          docker run -d --name backend-boilerplate --env-file .env.test nodejs-backend:latest
           sleep 5
-          docker logs test-container
+          docker logs backend-boilerplate
+          docker rm -f backend-boilerplate
