@@ -11,11 +11,13 @@ const errorConverter = (err, req, res, next) => {
     error = new ApiError(statusCode, message, false, err.stack);
   }
 
+  error.success = false;
   next(error);
 };
 
-const errorHandler = (err, req, res) => {
-  let { statusCode, message } = err;
+// eslint-disable-next-line no-unused-vars
+const errorHandler = (err, req, res, _next) => {
+  let { statusCode, message, success } = err;
 
   if (env.nodeEnv === 'production' && !err.isOperational) {
     statusCode = HTTP_STATUS.INTERNAL_SERVER_ERROR;
@@ -25,7 +27,7 @@ const errorHandler = (err, req, res) => {
   res.locals.errorMessage = err.message;
 
   const response = {
-    success: false,
+    success: success ?? false,
     statusCode,
     message,
     ...(env.nodeEnv === 'development' && { stack: err.stack }),
@@ -40,6 +42,7 @@ const errorHandler = (err, req, res) => {
 
 const notFound = (req, res, next) => {
   const error = new ApiError(HTTP_STATUS.NOT_FOUND, 'Route not found');
+  error.success = false;
   next(error);
 };
 
